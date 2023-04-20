@@ -1,4 +1,4 @@
-import numpy as np
+
 import tensorflow as tf
 from tensorflow import keras
 from flask import Flask, request, render_template
