@@ -2,40 +2,40 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    #<title>777</title>
+    <title>Прогнозирование значений параметра «Соотношение матрица-наполнитель»</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 <h1>Введите 12 числовых параметров:</h1>
 <form id="prediction-form">
-    <label for="input1">Параметр 1:</label>
-    <input type="number" id="input1" name="input1" required><br>
-    <label for="input2">Параметр 2:</label>
-    <input type="number" id="input2" name="input2" required><br>
-    <label for="input3">Параметр 3:</label>
-    <input type="number" id="input3" name="input3" required><br>
-    <label for="input4">Параметр 4:</label>
-    <input type="number" id="input4" name="input4" required><br>
-    <label for="input5">Параметр 5:</label>
-    <input type="number" id="input5" name="input5" required><br>
-    <label for="input6">Параметр 6:</label>
-    <input type="number" id="input6" name="input6" required><br>
-    <label for="input7">Параметр 7:</label>
-    <input type="number" id="input7" name="input7" required><br>
-    <label for="input8">Параметр 8:</label>
-    <input type="number" id="input8" name="input8" required><br>
-    <label for="input9">Параметрц 9:</label>
-    <input type="number" id="input9" name="input9" required><br>
-    <label for="input10">Параметр 10:</label>
-    <input type="number" id="input10" name="input10" required><br>
-    <label for="input11">Параметр 11:</label>
-    <input type="number" id="input11" name="input11" required><br>
-    <label for="input12">Параметр 12:</label>
-    <input type="number" id="input12" name="input12" required><br><br>
+    <label for="input1">Плотность, кг/м3     :</label>
+    <input type="number" min="0" step="0.01" id="input1" name="input1" required><br>
+    <label for="input2">Модуль упругости, ГПа:</label>
+    <input type="number" min="0" step="0.01" id="input2" name="input2" required><br>
+    <label for="input3">Количество отвердителя, м.%:</label>
+    <input type="number" min="0" step="0.01" id="input3" name="input3" required><br>
+    <label for="input4">Содержание эпоксидных групп,%_2:</label>
+    <input type="number" min="0" step="0.01" id="input4" name="input4" required><br>
+    <label for="input5">Температура вспышки, С_2:</label>
+    <input type="number" min="0" step="0.01" id="input5" name="input5" required><br>
+    <label for="input6">Поверхностная плотность, г/м2:</label>
+    <input type="number" min="0" step="0.01" id="input6" name="input6" required><br>
+    <label for="input7">Модуль упругости при растяжении, ГПа:</label>
+    <input type="number" min="0" step="0.01" id="input7" name="input7" required><br>
+    <label for="input8">Прочность при растяжении, ГПа:</label>
+    <input type="number" min="0" step="0.01" id="input8" name="input8" required><br>
+    <label for="input9">Потребление смолы, г/м2:</label>
+    <input type="number" min="0" step="0.01" id="input9" name="input9" required><br>
+    <label for="input10">Угол нашивки, град:</label>
+    <input type="number" min="0" step="0.01" id="input10" name="input10" required><br>
+    <label for="input11">Шаг нашивки:</label>
+    <input type="number" min="0" step="0.01" id="input11" name="input11" required><br>
+    <label for="input12">Плотность нашивки:</label>
+    <input type="number" min="0" step="0.01" id="input12" name="input12" required><br><br>
     <input type="button" id="submit-button" value="Прогноз">
 </form>
 <div id="result-container"></div>
-<audio src="sound.mp3" id="audio"></audio>
+<audio src="/sound.mp3" id="audio"></audio>
 <script>
         $(document).ready(function() {
             $('#submit-button').click(function() {
