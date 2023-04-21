@@ -1,8 +1,7 @@
-
-import tensorflow as tf
 from tensorflow import keras
 from flask import Flask, request, render_template
 import numpy as np
+
 
 app = Flask(__name__)
 model_path = 'app'
@@ -32,5 +31,3 @@ def predict():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
-
-#%%

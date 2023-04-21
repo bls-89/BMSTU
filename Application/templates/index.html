@@ -2,45 +2,46 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Прогнозирование значения переменной</title>
+    <title>Прогнозирование значения переменной «Соотношение матрица-наполнитель»</title>
 </head>
 <body>
-<h1>Прогнозирование значения переменной</h1>
+<h1>Прогнозирование значения переменной «Соотношение матрица-наполнитель»</h1>
 <form id="input-form">
     <label for="param1">Плотность, кг/м3:</label>
     <input type="number" step="0.01" id="param1" name="param1"><br>
-    <label for="param2">Параметр 2:</label>
+    <label for="param2">Модуль упругости, ГПа:</label>
     <input type="number" step="0.01" id="param2" name="param2"><br>
-    <label for="param3">Параметр 3:</label>
+    <label for="param3">Количество отвердителя, м.%:</label>
     <input type="number" step="0.01" id="param3" name="param3"><br>
-    <label for="param4">Параметр 4:</label>
+    <label for="param4">Содержание эпоксидных групп,%_2:</label>
     <input type="number" step="0.01" id="param4" name="param4"><br>
-    <label for="param5">Параметр 5:</label>
+    <label for="param5">Температура вспышки, С_2:</label>
     <input type="number" step="0.01" id="param5" name="param5"><br>
-    <label for="param6">Параметр 6:</label>
+    <label for="param6">Поверхностная плотность, г/м2:</label>
     <input type="number" step="0.01" id="param6" name="param6"><br>
-    <label for="param7">Параметр 7:</label>
+    <label for="param7">Модуль упругости при растяжении, ГПа:</label>
     <input type="number" step="0.01" id="param7" name="param7"><br>
-    <label for="param8">Параметр 8:</label>
+    <label for="param8">Прочность при растяжении, МПа:</label>
     <input type="number" step="0.01" id="param8" name="param8"><br>
-    <label for="param9">Параметр 9:</label>
+    <label for="param9">Потребление смолы, г/м2:</label>
     <input type="number" step="0.01" id="param9" name="param9"><br>
-    <label for="param10">Параметр 10:</label>
+    <label for="param10">Угол нашивки, град:</label>
     <input type="number" step="0.01" id="param10" name="param10"><br>
-    <label for="param11">Параметр 11:</label>
+    <label for="param11">Шаг нашивки:</label>
     <input type="number" step="0.01" id="param11" name="param11"><br>
-    <label for="param12">Параметр 12:</label>
+    <label for="param12">Плотность нашивки:</label>
     <input type="number" step="0.01" id="param12" name="param12"><br>
     <button type="submit">Прогнозировать</button>
 </form>
 <p>Прогноз: <span id="prediction"></span></p>
-<audio id="audio" src="submit_sound.mp3"></audio>
+<audio id="audio" src="sound.mp3"></audio>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
   $(document).ready(function() {
    // обработка события отправки формы
    $('#input-form').submit(function(event) {
-    event.preventDefault();
+    event.preventDefault()
+    $('#audio')[0].play();
     // отправка данных на сервер
     $.ajax({
      type: 'POST',
@@ -49,9 +50,7 @@
      success: function(response) {
       // вывод прогноза на страницу
       $('#prediction').text(response);
-      // воспроизведение звука
-      document.getElementById('audio').play();
-     }
+           }
     });
    });
   });
