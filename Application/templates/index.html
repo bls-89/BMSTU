@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Прогнозирование значений параметра «Соотношение матрица-наполнитель»</title>
+    <title>NN_app</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-<h1>Введите 12 числовых параметров:</h1>
+<h1>Прогнозирование значений параметра «Соотношение матрица-наполнитель» <br> Введите 12 числовых параметров:</h1>
 <form id="prediction-form">
     <label for="input1">Плотность, кг/м3     :</label>
     <input type="number" min="0" step="0.01" id="input1" name="input1" required><br>
@@ -35,7 +35,7 @@
     <input type="button" id="submit-button" value="Прогноз">
 </form>
 <div id="result-container"></div>
-<audio src="/sound.mp3" id="audio"></audio>
+<audio id="audio" src='static/sounds.mp3' type="audio/mp3"></audio>
 <script>
         $(document).ready(function() {
             $('#submit-button').click(function() {
@@ -44,7 +44,7 @@
                     type: 'POST',
                     data: $('#prediction-form').serialize(),
                     success: function(response) {
-                        $('#result-container').text('Предсказанное значение целевой переменной: ' + response.prediction);
+                        $('#result-container').text('Прогнозное значение параметра «Соотношение матрица-наполнитель»: ' + response.prediction);
                         $('#audio')[0].play();
                     }
                 });
