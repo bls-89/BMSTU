@@ -1,7 +1,6 @@
 pandas
 flask
 gunicorn
-tensorflow
 keras
 absl-py==1.4.0
 accelerate==0.16.0
