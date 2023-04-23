@@ -1,6 +1,8 @@
 pandas
 flask
 gunicorn
+tensorflow
+keras
 absl-py==1.4.0
 accelerate==0.16.0
 alembic==1.10.1
@@ -94,7 +96,6 @@ alembic==1.10.1
       - tensorboard-data-server==0.6.1
       - tensorboard-plugin-wit==1.8.1
       - tensorboardx==2.6
-      - tensorflow==2.11.0
       - tensorflow-estimator==2.11.0
       - tensorflow-intel==2.11.0
       - tensorflow-io-gcs-filesystem==0.31.0
