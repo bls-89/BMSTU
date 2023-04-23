@@ -1,6 +1,6 @@
 pandas
 scikit-learn~=1.0.2
-numpy~=1.23.5
-flask~=2.2.2
+numpy
+flask
 tensorflow~=2.11.0
 gunicorn
