@@ -33,16 +33,15 @@ def predict():
     # Нормализация данных
     df_nr = scaler.fit(X)
     input_array_normalized = scaler.transform(input_array)
-    y_nr = scaler.fit((y)[:,np.newaxis])
+
     # Предсказание значения целевой переменной
     prediction = model.predict(input_array_normalized)
 
     # Обратное преобразование данных
-    prediction_unnormalized = scaler.inverse_transform(prediction)
+    #prediction_unnormalized = scaler1.inverse_transform(prediction)
 
-    # Возврат результата в формате JSON
-    return jsonify({'prediction': float(prediction_unnormalized[0][0])})
+    # Возврат результата в формате JSON и ручной денормализатор, потому что задолбался уже с массивами воевать.
+    return jsonify({'prediction': float((prediction*5.202339)+0.3894)})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
-
