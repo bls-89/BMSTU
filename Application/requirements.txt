@@ -1,4 +1,4 @@
-pandas~=1.5.3
+pandas
 sklearn~=0.0.post4
 scikit-learn~=1.0.2
 numpy~=1.23.5
