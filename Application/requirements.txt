@@ -3,4 +3,5 @@ numpy
 Flask
 gunicorn
 pandas
+sklearn.preprocessing
 sklearn
