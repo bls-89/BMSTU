@@ -13,7 +13,7 @@ model = keras.models.load_model(model_path)
 # Создание объекта MinMaxScaler
 scaler = MinMaxScaler()
 scaler1 = MinMaxScaler()
-df = pd.read_csv('df_apriori.csv')
+df = pd.read_csv(r'static/df_apriori.csv')
 y = df['Соотношение матрица-наполнитель']
 X = df.drop(['Unnamed: 0','Соотношение матрица-наполнитель'], axis = 1)
 
