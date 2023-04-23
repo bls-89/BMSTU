@@ -103,7 +103,6 @@ alembic==1.10.1
       - termcolor==2.2.0
       - thinc==8.1.9
       - timm==0.6.12
-      - torch==1.13.1
       - torchmetrics==0.8.2
       - torchvision==0.14.1
       - typeguard==2.13.3
