@@ -31,7 +31,7 @@ def predict():
     input_array = [[float(input_data['input{}'.format(i+1)]) for i in range(12)]]
 
     # Нормализация данных
-    df_nr = scaler.fit(X)
+    df_nr = scaler.fit(X.values)
     input_array_normalized = scaler.transform(input_array)
 
     # Предсказание значения целевой переменной
