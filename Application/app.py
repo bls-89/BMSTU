@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 import pandas as pd
 import keras
-import sklearn
 from sklearn.preprocessing import MinMaxScaler
 import numpy as np
 app = Flask(__name__)
@@ -46,6 +45,4 @@ def predict():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
-#%%
 
-#%%
