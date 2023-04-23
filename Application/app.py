@@ -33,7 +33,7 @@ def predict():
     # Нормализация данных
     df_nr = scaler.fit(X)
     input_array_normalized = scaler.transform(input_array)
-    y_nr = scaler.fit(y[:,np.newaxis])
+    y_nr = scaler.fit((y)[:,np.newaxis])
     # Предсказание значения целевой переменной
     prediction = model.predict(input_array_normalized)
 
