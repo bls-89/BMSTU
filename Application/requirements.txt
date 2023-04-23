@@ -1,6 +1,8 @@
-tensorflow==2.11.0
-numpy
-Flask
+
+pandas~=1.5.3
+sklearn~=0.0.post4
+scikit-learn~=1.0.2
+numpy~=1.23.5
+flask~=2.2.2
+tensorflow~=2.11.0
 gunicorn
-pandas
-scikit-learn
