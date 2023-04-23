@@ -20,13 +20,6 @@ astunparse==1.6.3
 async-timeout @ file:///C:/b/abs_43ozhz2a8g/croots/recipe/async-timeout_1664876362767/work
 atomicwrites==1.4.0
 attrs @ file:///C:/b/abs_09s3y775ra/croot/attrs_1668696195628/work
-autogluon==0.7.0
-autogluon.common==0.7.0
-autogluon.core==0.7.0
-autogluon.features==0.7.0
-autogluon.multimodal==0.7.0
-autogluon.tabular==0.7.0
-autogluon.timeseries==0.7.0
 Automat @ file:///tmp/build/80754af9/automat_1600298431173/work
 autopep8 @ file:///opt/conda/conda-bld/autopep8_1650463822033/work
 Babel @ file:///C:/b/abs_a2shv_3tqi/croot/babel_1671782804377/work
@@ -325,7 +318,6 @@ pyviz-comms @ file:///tmp/build/80754af9/pyviz_comms_1623747165329/work
 PyWavelets @ file:///C:/b/abs_a8r4b1511a/croot/pywavelets_1670425185881/work
 pywin32==305.1
 pywin32-ctypes @ file:///C:/ci/pywin32-ctypes_1607553594546/work
-pywinpty @ file:///C:/b/abs_73vshmevwq/croot/pywinpty_1677609966356/work/target/wheels/pywinpty-2.0.10-cp39-none-win_amd64.whl
 PyYAML==6.0
 pyzmq @ file:///C:/ci/pyzmq_1657615952984/work
 QDarkStyle @ file:///tmp/build/80754af9/qdarkstyle_1617386714626/work
