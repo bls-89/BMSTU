@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 import pandas as pd
 from tensorflow import keras
-import scikit-learn as sklearn
+import sklearn
 from sklearn.preprocessing import MinMaxScaler
 import numpy as np
 app = Flask(__name__)
