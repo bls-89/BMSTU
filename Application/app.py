@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 import pandas as pd
-from tf import keras
+import keras
 import sklearn
 from sklearn.preprocessing import MinMaxScaler
 import numpy as np
