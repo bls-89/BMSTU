@@ -1,4 +1,3 @@
---upgrade pip
 absl-py==1.4.0
 accelerate==0.16.0
 aiohttp @ file:///C:/b/abs_c4zmy2l696/croot/aiohttp_1670009573673/work
