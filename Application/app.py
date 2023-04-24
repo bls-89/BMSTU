@@ -44,4 +44,4 @@ def predict():
     return jsonify({'prediction': float((prediction*5.202339)+0.389403)})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run()
