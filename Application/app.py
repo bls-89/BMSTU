@@ -15,7 +15,7 @@ scaler = MinMaxScaler()
 df = pd.read_csv(r'static/df_apriori.csv')
 y = df['Соотношение матрица-наполнитель']
 X = df.drop(['Unnamed: 0','Соотношение матрица-наполнитель'], axis = 1)
-
+X=X.values
 # Определение маршрута для отображения HTML-страницы
 @app.route('/')
 def home():
