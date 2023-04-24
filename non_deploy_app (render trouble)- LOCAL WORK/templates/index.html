@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>NN_app</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h1>Прогнозирование значений параметра «Соотношение матрица-наполнитель» <br> Введите 12 числовых параметров:</h1>
+<form id="prediction-form">
+    <label for="input1">Плотность, кг/м3     :</label>
+    <input type="number" min="0" step="0.01" id="input1" name="input1" required><br>
+    <label for="input2">Модуль упругости, ГПа:</label>
+    <input type="number" min="0" step="0.01" id="input2" name="input2" required><br>
+    <label for="input3">Количество отвердителя, м.%:</label>
+    <input type="number" min="0" step="0.01" id="input3" name="input3" required><br>
+    <label for="input4">Содержание эпоксидных групп,%_2:</label>
+    <input type="number" min="0" step="0.01" id="input4" name="input4" required><br>
+    <label for="input5">Температура вспышки, С_2:</label>
+    <input type="number" min="0" step="0.01" id="input5" name="input5" required><br>
+    <label for="input6">Поверхностная плотность, г/м2:</label>
+    <input type="number" min="0" step="0.01" id="input6" name="input6" required><br>
+    <label for="input7">Модуль упругости при растяжении, ГПа:</label>
+    <input type="number" min="0" step="0.01" id="input7" name="input7" required><br>
+    <label for="input8">Прочность при растяжении, ГПа:</label>
+    <input type="number" min="0" step="0.01" id="input8" name="input8" required><br>
+    <label for="input9">Потребление смолы, г/м2:</label>
+    <input type="number" min="0" step="0.01" id="input9" name="input9" required><br>
+    <label for="input10">Угол нашивки, град:</label>
+    <input type="number" min="0" step="0.01" id="input10" name="input10" required><br>
+    <label for="input11">Шаг нашивки:</label>
+    <input type="number" min="0" step="0.01" id="input11" name="input11" required><br>
+    <label for="input12">Плотность нашивки:</label>
+    <input type="number" min="0" step="0.01" id="input12" name="input12" required><br><br>
+    <input type="button" id="submit-button" value="Прогноз">
+</form>
+<div id="result-container"></div>
+<audio id="audio" src='static/sounds.mp3' type="audio/mp3"></audio>
+<script>
+        $(document).ready(function() {
+            $('#submit-button').click(function() {
+                $.ajax({
+                    url: '/predict',
+                    type: 'POST',
+                    data: $('#prediction-form').serialize(),
+                    success: function(response) {
+                        $('#result-container').text('Прогнозное значение параметра «Соотношение матрица-наполнитель»: ' + response.prediction);
+                        $('#audio')[0].play();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

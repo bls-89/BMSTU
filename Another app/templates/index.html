@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Предсказание переменной</title>
+    <style>
+  body {
+   background-image: url("background.jpg");
+   background-size: cover;
+   background-position: center;
+  }
+  .container {
+   margin: auto;
+   width: 50%;
+   border: 3px solid black;
+   padding: 10px;
+   text-align: center;
+  }
+  input[type="number"] {
+   margin: 5px;
+   padding: 5px;
+   border: 2px solid black;
+   border-radius: 5px;
+   width: 80%;
+  }
+  input[type="submit"] {
+   margin: 5px;
+   padding: 5px;
+   border: 2px solid black;
+   border-radius: 5px;
+   background-color: #4CAF50;
+   color: white;
+   font-size: 16px;
+   cursor: pointer;
+   width: 80%;
+  }
+ </style>
+    <script>
+  function playSound() {
+   var audio = new Audio("sound.mp3");
+   audio.play();
+  }
+ </script>
+</head>
+<body>
+<div class="container">
+    <h1>Введите данные для предсказания переменной</h1>
+    <form action="/predict" method="post">
+        <input type="number" name="input1" placeholder="Переменная 1"><br>
+        <input type="number" name="input2" placeholder="Переменная 2"><br>
+        <input type="number" name="input3" placeholder="Переменная 3"><br>
+        <input type="number" name="input4" placeholder="Переменная 4"><br>
+        <input type="number" name="input5" placeholder="Переменная 5"><br>
+        <input type="number" name="input6" placeholder="Переменная 6"><br>
+        <input type="number" name="input7" placeholder="Переменная 7"><br>
+        <input type="number" name="input8" placeholder="Переменная 8"><br>
+        <input type="number" name="input9" placeholder="Переменная 9"><br>
+        <input type="number" name="input10" placeholder="Переменная 10"><br>
+        <input type="number" name="input11" placeholder="Переменная 11"><br>
+        <input type="number" name="input12" placeholder="Переменная 12"><br>
+        <input type="submit" value="Прогноз" onclick="playSound()">
+    </form>
+</div>
+</body>
+</html>
+</html>
