@@ -6,7 +6,7 @@ import numpy as np
 app = Flask(__name__)
 
 # Загрузка модели Keras
-model_path = 'app'
+model_path = 'saved_modelNN'
 model = keras.models.load_model(model_path)
 
 # Создание объекта MinMaxScaler
