@@ -1,7 +1,7 @@
 meta:
   environment: python
   toolchain:
-    name: pip
+    name: pip -H
     version: 3.9.13
 build:
   requirementsPath: requirements.txt
