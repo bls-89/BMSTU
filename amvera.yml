@@ -4,7 +4,7 @@ meta:
     name: pip -H
     version: 3.9.13
 build:
-  requirementsPath: requirements.txt
+  requirementsPath: Application/requirements.txt
 run:
   command: gunicorn --bind 0.0.0.0:5000 app:app
     containerPort: 5000
