@@ -6,6 +6,5 @@ meta:
 build:
   requirementsPath: requirements.txt
 run:
-  scriptName: app.py
-  persistenceMount: /application
-  containerPort: 80
+  command: gunicorn --bind 0.0.0.0:5000 app:app
+    containerPort: 5000
